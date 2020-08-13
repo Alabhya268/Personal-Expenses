@@ -25,7 +25,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.deepPurpleAccent,
       ),
-      darkTheme: ThemeData.dark(),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        textTheme: ThemeData().textTheme.copyWith(
+              title: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Personal Expenses',
+              ),
+              button: TextStyle(color: Colors.white),
+            ),
+        fontFamily: 'EncodeSansExpanded',
+        primarySwatch: Colors.deepPurple,
+        accentColor: Colors.deepPurpleAccent,
+      ),
     );
   }
 }
