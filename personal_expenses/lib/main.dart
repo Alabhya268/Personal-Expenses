@@ -16,9 +16,16 @@ class MyApp extends StatelessWidget {
       title: 'Personal Expenses',
       home: MyHomePage(),
       theme: ThemeData(
-          fontFamily: 'EncodeSansExpanded',
-          primarySwatch: Colors.deepPurple,
-          accentColor: Colors.deepPurpleAccent),
+        textTheme: ThemeData().textTheme.copyWith(
+              title: TextStyle(
+                fontFamily: 'Personal Expenses',
+              ),
+              button: TextStyle(color: Colors.white),
+            ),
+        fontFamily: 'EncodeSansExpanded',
+        primarySwatch: Colors.deepPurple,
+        accentColor: Colors.deepPurpleAccent,
+      ),
       darkTheme: ThemeData.dark(),
     );
   }
